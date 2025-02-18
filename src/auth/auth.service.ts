@@ -57,7 +57,7 @@ export class AuthService {
         return user;
     }
 
-    addRefreshTokenToRewsponse(res:Response,refreshToken:string){
+    addRefreshTokenToResponse(res:Response,refreshToken:string){
         const expiresIn=new Date();
         expiresIn.setDate(expiresIn.getDate()+this.EXPIRE_DAY_REFRESH_TOKEN);
         res.cookie(this.REFRESH_TOKEN_NAME,refreshToken,{
